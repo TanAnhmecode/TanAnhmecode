@@ -10,6 +10,7 @@ IFELSE :blue - :b > 0.000001 [:blue - :b - 0.000001] [:blue - :b])
 end
 
 to rainbow
+ct
 Print [U r in MSWLogo]
 Print [Script : Rainbow] 
 print [Made by : Huynh Tan Anh!]
