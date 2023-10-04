@@ -15,6 +15,10 @@ Print [U r in MSWLogo]
 Print [Script : Rainbow] 
 print [Made by : Huynh Tan Anh!]
 window
+make "rp2 0
+make "n 1
+while [:n < 2][
+make "rp2 :rp2 + 1
 cs
 pu
 bk 200
@@ -32,8 +36,10 @@ make "blue 0
 make "r 0
 make "g 0
 make "b 0
-repeat 6[make "rp :rp + 1 if :rp = 1[ make "red 255 make "green 0 make "blue 255] if :rp = 2[make "red 0 make "green 0 make "blue 255] if :rp = 3[make "red 0 make "green 255 make "blue 255] if :rp = 4[make "red 0 make "green 255 make "blue 0]if :rp = 5[ make "red 255 make "green 255 make "blue 0] if :rp = 6[make "red 255 make "green 0 make "blue 255]
-repeat 255[if :rp = 1[make "r :color] if :rp = 2[make "green :color] if :rp = 3 [make "b :color] if :rp = 4 [make "red :color] if :rp = 5 [make "g :color] if :rp = 6[make "green :color make "blue :color] color :red :green :blue :r :g :b rt 90 fd 0.2975 bk 0.2975 * 2 lt 90 arc2 180 :num +0.2975
+repeat 6[make "rp :rp + 1 if :rp2 = 1[ if :rp = 1[ make "red 255 make "green 0 make "blue 255] if :rp = 2[make "red 0 make "green 0 make "blue 255] if :rp = 3[make "red 0 make "green 255 make "blue 255] if :rp = 4[make "red 0 make "green 255 make "blue 0]if :rp = 5[ make "red 255 make "green 255 make "blue 0] if :rp = 6[make "red 255 make "green 0 make "blue 255]]
+if :rp2 = 2[ if :rp = 1[ make "red 255 make "green 0 make "blue 0] if :rp = 2[make "red 255 make "green 255 make "blue 0] if :rp = 3[make "red 0 make "green 255 make "blue 0] if :rp = 4[make "red 0 make "green 255 make "blue 255]if :rp = 5[ make "red 0 make "green 0 make "blue 255] if :rp = 6[make "red 255 make "green 0 make "blue 255]]
+repeat 255[if :rp2 = 1[if :rp = 1[make "r :color] if :rp = 2[make "green :color] if :rp = 3 [make "b :color] if :rp = 4 [make "red :color] if :rp = 5 [make "g :color] if :rp = 6[make "green :color make "blue :color]]
+if :rp2 = 2[if :rp = 1[make "green :color] if :rp = 2[make "r :color] if :rp = 3 [make "blue :color] if :rp = 4 [make "g :color] if :rp = 5 [make "red :color] if :rp = 6[make "green :color]] color :red :green :blue :r :g :b rt 90 fd 0.2975 bk 0.2975 * 2 lt 90 arc2 180 :num +0.2975
 pu
 lt 45 bk 0.14875 fd 0.14875 fill rt 45 pd lt 90 bk :num * 2 + 0.6 make "num :num+0.2975 lt 90
 make "color :color + 1]
@@ -48,18 +54,20 @@ pe
 lt 90
 pd
 ppt
-setpensize [100 100]
-pe]
+pe
+setpensize [100 100]]
+if :rp2 = 2[make "rp2 0]]
 end
 
 Make "a 172
 Make "b 0
-Make "blue 122
-Make "color 123
+Make "blue 0
+Make "color 10
 Make "g 0
-Make "green 122
+Make "green 255
 Make "n 1
-Make "num 416.202500000013
+Make "num 230.860000000005
 Make "r 0
-Make "red 255
-Make "rp 6
+Make "red 9
+Make "rp 4
+Make "rp2 1
