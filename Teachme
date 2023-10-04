@@ -12,7 +12,7 @@ end
 to rainbow
 Print [U r in MSWLogo]
 Print [Script : Rainbow] 
-print [Cre : Huynh Tan Anh!]
+print [Made by : Huynh Tan Anh!]
 window
 cs
 pu
