@@ -41,7 +41,7 @@ if :rp2 = 2[ if :rp = 1[ make "red 255 make "green 0 make "blue 0] if :rp = 2[ma
 repeat 255[if :rp2 = 1[if :rp = 1[make "r :color] if :rp = 2[make "green :color] if :rp = 3 [make "b :color] if :rp = 4 [make "red :color] if :rp = 5 [make "g :color] if :rp = 6[make "green :color make "blue :color]]
 if :rp2 = 2[if :rp = 1[make "green :color] if :rp = 2[make "r :color] if :rp = 3 [make "blue :color] if :rp = 4 [make "g :color] if :rp = 5 [make "red :color] if :rp = 6[make "green :color]] color :red :green :blue :r :g :b rt 90 fd 0.2975 bk 0.2975 * 2 lt 90 arc2 180 :num +0.2975
 pu
-lt 45 bk 0.14875 fd 0.14875 fill rt 45 pd lt 90 bk :num * 2 + 0.6 make "num :num+0.2975 lt 90
+lt 45 bk sqrt(0.022) fd sqrt(0.022) fill rt 45 pd lt 90 bk :num * 2 + 0.6 make "num :num + sqrt(0.0885) lt 90
 make "color :color + 1]
 make "color 0
 make "r 0
@@ -61,13 +61,13 @@ end
 
 Make "a 172
 Make "b 0
-Make "blue 0
-Make "color 10
+Make "blue 127
+Make "color 128
 Make "g 0
-Make "green 255
+Make "green 127
 Make "n 1
-Make "num 230.860000000005
+Make "num 417.675262344851
 Make "r 0
-Make "red 9
-Make "rp 4
+Make "red 255
+Make "rp 6
 Make "rp2 1
